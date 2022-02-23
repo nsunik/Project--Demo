@@ -14,6 +14,7 @@ with c1:
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         if st.button('   Submit  '):
+            
             results = classify.predict(image)
             with st.spinner('Loading Result...'):
                 time.sleep(2)
